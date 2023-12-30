@@ -14,8 +14,8 @@ def test():
     return{'message':'start server'}, 201 
 
 def create_teacher():
-    args = request.jason
-    hashed_password = generate_password_hash(args['password'])
+    args = request.json
+    hashed_password = generate_password_hash(args['teacher_password'])
 
     qry = '''
     INSERT INTO
@@ -30,3 +30,9 @@ def create_teacher():
         "date_created": args["date_created"],
         "is_admin": args["is_admin"]
     }
+    try:
+        id = DB.insert(qry, data)
+    except Exception:
+        print('Er is een probleem opgetreden, contact de admin.')
+
+    return {'message': 'success', 'id': id}, 201
