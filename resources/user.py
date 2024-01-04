@@ -2,8 +2,14 @@ from flask import request
 from flask_bcrypt import generate_password_hash
 from db import DB
 from datetime import datetime
+from lib.testgpt.testgpt import TestGPT, FakeTestGPT
 import string
+import openai
+from dotenv import load_dotenv
+import os
+from openai import RateLimitError
 import random # define the random module
+
 # from flask_jwt_extended import (
 #     jwt_required,
 #     create_access_token,
@@ -73,3 +79,29 @@ def get_user():
         print('Er is een probleem opgetreden, contact de admin.')
 
     return {'message': 'success', 'rows': rows}, 201
+
+def get_specific_notes(note_id):
+    
+    qry = '''
+    SELECT notes.note_id , notes.title, notes.note_source, notes.is_public, teachers.display_name, notes.category_id, notes.date_created
+    FROM notes
+    INNER JOIN teachers 
+    on notes.teacher_id = teachers.teacher_id
+    WHERE note_id = ?
+    '''
+
+    try:
+        rows = DB.all(qry, (note_id,))
+    except Exception:
+        print('Er is een probleem opgetreden, contact de admin.')
+
+    return {'message': 'success', 'rows': rows}, 201
+
+
+def create_notes():
+    api_key = os.getenv("API_KEY")
+    test_gpt = TestGPT(api_key)
+    open_question = test_gpt.generate_open_question("de pc is oranje en de boek is blau en de tafel is zwart")
+    
+
+    return {'message': 'success', 'open_question': open_question}, 201
