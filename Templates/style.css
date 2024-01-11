@@ -1,3 +1,167 @@
 * {
-    background-color: rgb(0, 0, 190);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    background-color: #9CFF2E;
+    color: white;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    gap: 5vw;
+    padding: 12px;
+    justify-content: center;
+
+    background-color: #2192FF;
+    border-bottom: 3px solid #217cd1;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    float: left;   
+}
+
+nav a:hover {
+    color: #9CFF2E;
+}
+
+/* Main */
+
+.FilterDiv {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #38E54D;
+
+    background-color: #9CFF2E;
+}
+
+.FilterDiv button {
+    text-decoration: none;
+    background-color: #38E54D;
+    border: 3px solid #2fb83f;
+    margin-left: 25px;
+    padding: 5px 25px;
+}
+
+.OverzichtDiv {
+    text-align: center;
+    padding: 15px;
+}
+
+.tableOverzicht {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.LoginDiv {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+
+    margin: 0 auto; 
+    width: 200px;
+
+    margin-top: 100px;
+
+    background-color: #2192FF;
+    border: 3px solid #217cd1;
+}
+
+.LoginDiv h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.LoginDiv button {
+    text-decoration: none;
+    background-color: #38E54D;
+    border: 3px solid #2fb83f;
+    padding: 5px 25px;
+}
+
+.SignUpDiv {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+
+    margin: 0 auto; 
+    width: 200px;
+
+    margin-top: 100px;
+
+    background-color: #2192FF;
+    border: 3px solid #217cd1;
+}
+
+.SignUpDiv h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.SignUpDiv button {
+    text-decoration: none;
+    background-color: #38E54D;
+    border: 3px solid #2fb83f;
+    padding: 5px 25px;
+}
+
+.NieuweNotitieDiv {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+
+    margin: 0 auto; 
+    width: 200px;
+
+    margin-top: 100px;
+
+    background-color: #2192FF;
+    border: 3px solid #217cd1;
+}
+
+.NieuweNotitieDiv h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.NieuweNotitieDiv button {
+    text-decoration: none;
+    background-color: #38E54D;
+    border: 3px solid #2fb83f;
+    padding: 5px 25px;
+}
+
+.NotitieDetailsDiv {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+
+    margin: 0 auto; 
+    width: 200px;
+
+    margin-top: 100px;
+
+    background-color: #2192FF;
+    border: 3px solid #217cd1;
+}
+
+.NotitieDetailsDiv h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.NotitieDetailsDiv button {
+    text-decoration: none;
+    background-color: #38E54D;
+    border: 3px solid #2fb83f;
+    padding: 5px 25px;
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notities - Overzicht</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="overzicht.html">Home</a>
+        <a href="addnote.html">Note Toevoegen</a>
+        <a href="detailsnote.html">Note Details</a>
+        <a class="rightNav" href="signup.html">Sign Up</a>
+        <a class="rightNav" href="inlog.html">Inlog</a>
+    </nav>
+    <main>
+        <div class="FilterDiv">
+            <form action="#" method="get" id="filterform">
+                <label for="tekst">Tekst:</label>
+                <input type="text" id="tekst" name="tekst">
+
+                <label for="categorie">Categorie:</label>
+                <select name="categorie" id="categorie">
+                    <option value="biologie">Biologie</option>
+                    <option value="wiskunde">Wiskunde</option>
+                    <option value="nederlands">Nederlands</option>
+                    <option value="engels">Engels</option>
+                </select>
+                <label for="docent">Van alle docenten:</label>
+                <input type="checkbox" id="docent" name="docent" value="Docent">
+                <label for="vragen">Met vragen:</label>
+                <input type="checkbox" id="vragen" name="vragen" value="Vragen">
+
+                <button type="submit" form="filterform" value="Submit">Filter</button>
+            </form>
+        </div>
+
+        <div class="OverzichtDiv">
+            <h1>Overzicht</h1>
+            <table class="tableOverzicht">
+                <tr>
+                    <th>Notitie</th>
+                    <th>Met Vragen</th>
+                    <th>Categorie</th>
+                    <th>Docent</th>
+                    <th>Aangemaakt</th>
+                </tr>
+                <tr>
+                    <td>Tekst</td>
+                    <td>Tekst</td>
+                    <td>Tekst</td>
+                    <td>Tekst</td>
+                    <td>Tekst</td>
+                </tr>
+                <tr>
+                    <td>Tekst</td>
+                    <td>Tekst</td>
+                    <td>Tekst</td>
+                    <td>Tekst</td>
+                    <td>Tekst</td>
+                </tr>
+              </table>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
